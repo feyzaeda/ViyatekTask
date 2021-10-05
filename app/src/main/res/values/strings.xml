@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ViyatekTask</string>
+    <string name="navigation_home">Home</string>
+    <string name="navigation_bookmark">Bookmark</string>
+    <string name="navigation_preference">Preference</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
