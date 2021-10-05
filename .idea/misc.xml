@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/tfeyz/AndroidStudioProjects/ViyatekTask/app/src/main/res/drawable/bottom_navigator_selector.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/tfeyz/AndroidStudioProjects/ViyatekTask/app/src/main/res/drawable/ic_bookmark.xml" value="0.20555555555555555" />
+        <entry key="..\:/Users/tfeyz/AndroidStudioProjects/ViyatekTask/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/tfeyz/AndroidStudioProjects/ViyatekTask/app/src/main/res/layout/fragment_asdf.xml" value="0.1" />
+        <entry key="..\:/Users/tfeyz/AndroidStudioProjects/ViyatekTask/app/src/main/res/layout/fragment_bookmark.xml" value="0.223731884057971" />
+        <entry key="..\:/Users/tfeyz/AndroidStudioProjects/ViyatekTask/app/src/main/res/layout/fragment_home.xml" value="0.223731884057971" />
+        <entry key="..\:/Users/tfeyz/AndroidStudioProjects/ViyatekTask/app/src/main/res/layout/fragment_preference.xml" value="0.223731884057971" />
+        <entry key="..\:/Users/tfeyz/AndroidStudioProjects/ViyatekTask/app/src/main/res/menu/bottom_navigation.xml" value="0.183206106870229" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
