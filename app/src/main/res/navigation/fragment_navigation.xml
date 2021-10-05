@@ -15,8 +15,7 @@
         android:label="fragment_bookmark"
         tools:layout="@layout/fragment_bookmark" />
     <fragment
-        android:id="@+id/preferenceFragment"
-        android:name="com.example.viyatektask.PreferenceFragment"
-        android:label="fragment_preference"
-        tools:layout="@layout/fragment_preference" />
+        android:id="@+id/settingsFragment"
+        android:name="com.example.viyatektask.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>

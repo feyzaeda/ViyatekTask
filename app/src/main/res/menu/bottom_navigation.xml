@@ -11,7 +11,7 @@
         android:title="@string/navigation_bookmark"/>
 
     <item
-        android:id="@+id/preferenceFragment"
+        android:id="@+id/settingsFragment"
         android:icon="@drawable/ic_preference"
         android:title="@string/navigation_preference"/>
 </menu>
