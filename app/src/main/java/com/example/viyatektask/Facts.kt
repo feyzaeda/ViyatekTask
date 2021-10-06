@@ -4,6 +4,7 @@ data class FactData(
     val topic: String,
     val fact: String,
     val title: String,
-    val id : String
+    val id : String,
+    var isBookmark : Boolean? = false
 )
 

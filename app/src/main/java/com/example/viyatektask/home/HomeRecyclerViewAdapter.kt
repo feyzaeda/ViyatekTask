@@ -1,15 +1,12 @@
 package com.example.viyatektask.home
 
-import android.content.Context
-import android.content.SharedPreferences
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.viyatektask.FactData
 import com.example.viyatektask.R
-import com.example.viyatektask.databinding.ItemAdapterBookmarkRecyclerViewBinding
+import com.example.viyatektask.SharedPreferencesManager
 import com.example.viyatektask.databinding.ItemAdapterHomeRecyclerViewBinding
 
 class HomeRecyclerViewAdapter : RecyclerView.Adapter<HomeRecyclerViewAdapter.HomeViewHolder>() {
@@ -26,14 +23,40 @@ class HomeRecyclerViewAdapter : RecyclerView.Adapter<HomeRecyclerViewAdapter.Hom
                     homeItemTvFact.text = fact
                     homeItemTvTopic.text = topic
                     homeItemTvTitle.text = title
-                    homeItemBtnBookmark.setOnClickListener {  }
-                    Glide.with(itemBinding.root.context).load(String.format(itemBinding.root.context.resources.getString(R.string.cheap_image_jpg_url),id)).into(homeItemImg)
+                    if (isBookmark == true) {
+                        homeItemBtnBookmark.setImageResource(R.drawable.ic_bookmark_selected)
+                    } else {
+                        homeItemBtnBookmark.setImageResource(R.drawable.ic_bookmark)
+                    }
+                    homeItemBtnBookmark.setOnClickListener {
+                        if (isBookmark == true) {
+                            removeBookmark(id)
+                            isBookmark = false
+                        } else {
+                            saveBookmark(id)
+                            isBookmark = true
+                        }
+                        notifyItemChanged(position)
+                    }
+                    Glide.with(itemBinding.root.context).load(
+                        String.format(
+                            itemBinding.root.context.resources.getString(R.string.cheap_image_jpg_url),
+                            id
+                        )
+                    ).into(homeItemImg)
                 }
             }
         }
 
     }
 
+    private fun saveBookmark(id: String) {
+        SharedPreferencesManager.addBookmark(id)
+    }
+
+    private fun removeBookmark(id: String) {
+        SharedPreferencesManager.removeBookmark(id)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
 
