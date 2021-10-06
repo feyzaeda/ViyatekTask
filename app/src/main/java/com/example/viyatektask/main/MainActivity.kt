@@ -1,10 +1,11 @@
-package com.example.viyatektask
+package com.example.viyatektask.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import com.example.viyatektask.R
 import com.example.viyatektask.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

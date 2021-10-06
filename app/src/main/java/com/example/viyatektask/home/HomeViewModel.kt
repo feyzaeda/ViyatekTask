@@ -1,12 +1,13 @@
-package com.example.viyatektask
+package com.example.viyatektask.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.viyatektask.FactData
+import com.example.viyatektask.ViyatekApplication
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.InputStream
-
 class HomeViewModel : ViewModel() {
 
     private var _factList: MutableLiveData<ArrayList<FactData>> =
@@ -31,12 +32,14 @@ class HomeViewModel : ViewModel() {
     private fun readDataFromJson(jsonPath: String): ArrayList<FactData> {
         val jsonFileString: String? = readJsonFromFile(jsonPath)
         val type = object : TypeToken<ArrayList<FactData>>() {}.type
-        return Gson().fromJson(jsonFileString, type)
+        return Gson().fromJson<ArrayList<FactData>>(jsonFileString, type)
     }
 
     fun getFactsList() {
         val list = readDataFromJson("uf_json.json")
         _factList.postValue(list)
     }
+
+
 
 }
