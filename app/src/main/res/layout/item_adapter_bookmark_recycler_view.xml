@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+        android:id="@+id/bookmarkItemTvTopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/app_name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -12,7 +25,7 @@
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/bookmarkItemTvTopic">
 
 
         <LinearLayout
@@ -21,68 +34,56 @@
             android:orientation="vertical">
 
 
-            <TextView
-                android:id="@+id/homeItemTvTopic"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="@string/app_name"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/homeItemImg"
+                    android:id="@+id/bookmarkItemImg"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_margin="20dp"
                     android:scaleType="centerCrop"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/homeItemBtnLike"
+                    android:id="@+id/bookmarkItemBtnLike"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginBottom="8dp"
                     android:scaleType="fitXY"
                     android:tint="@color/white"
-                    app:layout_constraintBottom_toBottomOf="@id/homeItemImg"
-                    app:layout_constraintStart_toStartOf="@id/homeItemImg"
+                    app:layout_constraintBottom_toBottomOf="@id/bookmarkItemImg"
+                    app:layout_constraintStart_toStartOf="@id/bookmarkItemImg"
                     app:srcCompat="@drawable/ic_favorite" />
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/homeItemBtnBookmark"
+                    android:id="@+id/bookmarkItemBtnBookmark"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
                     android:scaleType="fitXY"
                     android:tint="@color/white"
-                    app:layout_constraintBottom_toBottomOf="@id/homeItemImg"
-                    app:layout_constraintEnd_toEndOf="@id/homeItemImg"
+                    app:layout_constraintBottom_toBottomOf="@id/bookmarkItemImg"
+                    app:layout_constraintEnd_toEndOf="@id/bookmarkItemImg"
                     app:srcCompat="@drawable/ic_bookmark" />
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/homeItemBtnPlay"
+                    android:id="@+id/bookmarkItemBtnPlay"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
                     android:tint="@color/teal_700"
-                    app:layout_constraintStart_toStartOf="@id/homeItemImg"
-                    app:layout_constraintTop_toBottomOf="@id/homeItemImg"
+                    app:layout_constraintStart_toStartOf="@id/bookmarkItemImg"
+                    app:layout_constraintTop_toBottomOf="@id/bookmarkItemImg"
                     app:srcCompat="@drawable/ic_play" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/homeItemTvTitle"
+                    android:id="@+id/bookmarkItemTvTitle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -94,22 +95,22 @@
                     android:text="@string/app_name"
                     android:textSize="12sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/homeItemBtnPlay"
-                    app:layout_constraintTop_toBottomOf="@id/homeItemImg" />
+                    app:layout_constraintStart_toEndOf="@+id/bookmarkItemBtnPlay"
+                    app:layout_constraintTop_toBottomOf="@id/bookmarkItemImg" />
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/homeItemBtnShare"
+                    android:id="@+id/bookmarkItemBtnShare"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="8dp"
                     android:tint="@color/teal_700"
-                    app:layout_constraintEnd_toEndOf="@id/homeItemImg"
-                    app:layout_constraintTop_toBottomOf="@id/homeItemImg"
+                    app:layout_constraintEnd_toEndOf="@id/bookmarkItemImg"
+                    app:layout_constraintTop_toBottomOf="@id/bookmarkItemImg"
                     app:srcCompat="@drawable/ic_share" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/homeItemTvFact"
+                    android:id="@+id/bookmarkItemTvFact"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -118,9 +119,9 @@
                     android:maxLines="5"
                     android:text="@string/app_name"
                     android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="@id/homeItemBtnShare"
-                    app:layout_constraintStart_toStartOf="@id/homeItemBtnPlay"
-                    app:layout_constraintTop_toBottomOf="@id/homeItemBtnPlay" />
+                    app:layout_constraintEnd_toEndOf="@id/bookmarkItemBtnShare"
+                    app:layout_constraintStart_toStartOf="@id/bookmarkItemBtnPlay"
+                    app:layout_constraintTop_toBottomOf="@id/bookmarkItemBtnPlay" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

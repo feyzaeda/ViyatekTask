@@ -1,7 +1,8 @@
-package com.example.viyatektask
+package com.example.viyatektask.manager
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.viyatektask.application.ViyatekApplication
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 

@@ -1,4 +1,4 @@
-package com.example.viyatektask.home
+package com.example.viyatektask.bookmark
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -10,7 +10,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.InputStream
 
-class HomeViewModel : ViewModel() {
+class BookmarkViewModel : ViewModel() {
 
     private var _factList: MutableLiveData<ArrayList<FactData>> =
         MutableLiveData<ArrayList<FactData>>()
@@ -47,6 +47,5 @@ class HomeViewModel : ViewModel() {
         }
         _factList.postValue(list)
     }
-
 
 }

@@ -1,4 +1,4 @@
-package com.example.viyatektask
+package com.example.viyatektask.application
 
 import android.app.Application
 

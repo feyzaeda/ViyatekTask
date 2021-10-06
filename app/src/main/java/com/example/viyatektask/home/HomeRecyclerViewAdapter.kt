@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.viyatektask.FactData
 import com.example.viyatektask.R
-import com.example.viyatektask.SharedPreferencesManager
+import com.example.viyatektask.manager.SharedPreferencesManager
 import com.example.viyatektask.databinding.ItemAdapterHomeRecyclerViewBinding
 
 class HomeRecyclerViewAdapter : RecyclerView.Adapter<HomeRecyclerViewAdapter.HomeViewHolder>() {
@@ -14,7 +14,6 @@ class HomeRecyclerViewAdapter : RecyclerView.Adapter<HomeRecyclerViewAdapter.Hom
 
     inner class HomeViewHolder(private val itemBinding: ItemAdapterHomeRecyclerViewBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
-
 
         fun bind(position: Int) {
             val item = list[position]
@@ -80,6 +79,8 @@ class HomeRecyclerViewAdapter : RecyclerView.Adapter<HomeRecyclerViewAdapter.Hom
         list.clear()
         list.addAll(factList)
     }
+
+
 
 
 }
