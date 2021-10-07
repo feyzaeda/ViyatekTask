@@ -31,13 +31,13 @@ class BookmarkFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initUi(view)
+        initUi()
         observeViewModel()
         viewModel.getFactsList()
 
     }
 
-    private fun initUi(view: View) {
+    private fun initUi() {
         binding.apply {
             bookmarkRecyclerView.apply {
                 layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)

@@ -39,13 +39,16 @@ class BookmarkViewModel : ViewModel() {
 
     fun getFactsList() {
         val list = readDataFromJson("uf_json.json")
+        val selectedList : ArrayList<FactData> = arrayListOf()
         val bookmarkList = SharedPreferencesManager.getBookmarks()
         if (bookmarkList.isNullOrEmpty().not()) {
             for (item in list) {
-                item.isBookmark = bookmarkList?.contains(item.id)
+                if(bookmarkList?.contains(item.id) == true){
+                    selectedList.add(item)
+                }
             }
         }
-        _factList.postValue(list)
+        _factList.postValue(selectedList)
     }
 
 }
