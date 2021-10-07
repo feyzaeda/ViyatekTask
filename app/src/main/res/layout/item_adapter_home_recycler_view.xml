@@ -19,12 +19,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardElevation="3dp"
         app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/homeItemTvTopic">
@@ -34,7 +33,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -65,8 +63,8 @@
                     android:id="@+id/homeItemBtnBookmark"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
                     android:scaleType="fitXY"
                     android:tint="@color/white"
                     app:layout_constraintBottom_toBottomOf="@id/homeItemImg"

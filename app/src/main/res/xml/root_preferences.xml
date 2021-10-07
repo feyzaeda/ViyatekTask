@@ -1,15 +1,21 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory
-        android:layout="@layout/item_settings"/>
+    <PreferenceCategory android:layout="@layout/settings_item" />
+
 
     <PreferenceCategory app:title="@string/messages_header">
 
         <EditTextPreference
             app:key="signature"
             app:title="@string/signature_title"
-            app:useSimpleSummaryProvider="true" />
+            app:useSimpleSummaryProvider="true"
+            android:icon="@drawable/ic_text"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="List">
 
         <ListPreference
             app:defaultValue="reply"
@@ -17,32 +23,34 @@
             app:entryValues="@array/reply_values"
             app:key="reply"
             app:title="@string/reply_title"
-            app:useSimpleSummaryProvider="true" />
-
+            app:useSimpleSummaryProvider="true"
+            android:icon="@drawable/ic_format_list"/>
     </PreferenceCategory>
-
 
 
     <PreferenceCategory app:title="@string/sync_header">
 
         <SwitchPreferenceCompat
             app:key="sync"
-            app:title="@string/sync_title" />
+            app:title="@string/sync_title"
+            android:icon="@drawable/ic_email"/>
 
         <SwitchPreferenceCompat
             app:dependency="sync"
             app:key="attachment"
             app:summaryOff="@string/attachment_summary_off"
             app:summaryOn="@string/attachment_summary_on"
-            app:title="@string/attachment_title" />
+            app:title="@string/attachment_title"
+            android:icon="@drawable/ic_download"/>
 
     </PreferenceCategory>
 
     <PreferenceCategory app:title="Checkbox">
         <CheckBoxPreference
-            app:defaultValue="false"
             android:title="Checkbox"
-            app:key="Checkbox"/>
+            app:defaultValue="false"
+            app:key="Checkbox"
+            android:icon="@drawable/ic_check"/>
     </PreferenceCategory>
 
 </PreferenceScreen>
