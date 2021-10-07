@@ -7,6 +7,24 @@
     tools:context=".bookmark.BookmarkFragment">
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bookmarkToolbar"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/navigation_bookmark"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/bookmarkRecyclerView"
         android:layout_width="0dp"
@@ -15,7 +33,7 @@
         android:scrollbarSize="4dp"
         android:scrollbarStyle="outsideOverlay"
         android:scrollbars="vertical"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bookmarkToolbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
